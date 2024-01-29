@@ -8,6 +8,7 @@ CREATE TABLE users(
     name varchar(50) not null,
     nick varchar(50) not null unique,
     email varchar(50) not null unique,
-    password varchar(20) not null unique,
-    createdAt timestamp default current_timestamp()
+    password varchar(20) not null,
+    created_at timestamp default current_timestamp(),
+    updated_at timestamp default current_timestamp() on UPDATE current_timestamp()
 ) ENGINE=INNODB;
